@@ -1,0 +1,28 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+
+</head>
+{% block body %}
+<div class="col-md-5">
+    {% csrf_token %}
+  <form action = "{% url 'qrcode1' %}" method="post">
+  {% csrf_token %}
+        <div class="form-group" align="center">
+            <h1>For to Generate the QR Code</h1>
+            <label>Enter the Name :</label>
+            <input type="text" class="form-control" id = 'sname' placeholder="Enter Name" name="sname">
+        <br>
+            <br>
+            <label>Enter the Register Number :</label>
+            <input type="text" class="form-control" id = 'sid' placeholder="Enter ID" name="sid">
+        <br>
+            <br>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+
+    </form>
+</div>
+{% endblock %}
+</html>

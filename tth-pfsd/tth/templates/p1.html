@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body {
+           background-image: url('static/images/bg2.jpg');
+        }
+</style>
+</head>
+<body background="blue">
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="container" align="center">
+  <h1>Agriculture place</h1>
+    <p>Amazing views</p>
+</div>
+<center><div class="card" style="width: 18rem;" align="center">
+  <img src="static/images/ocean.jpg" class="card-img-top" alt="tourism" align="center">
+  <div class="card-body">
+    <p class="card-text">Aritech</p>
+      <button type="button" class="btn btn-primary btn-sm">Get started</button>
+  </div>
+</div></center>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+
+</head>
+{% block body %}
+<div class="col-md-5">
+    {% csrf_token %}
+  <form action = "{% url 'login' %}" method="post">
+  {% csrf_token %}
+        <form>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="text" name="username" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Enter Username</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" name="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Enter Password</label>
+  </div>
+    <div class="col">
+      <!-- Simple link -->
+      <a href="#!">Forgot password?</a>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-default">Sign in</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a href="{% url 'reguser' %}">Register</a></p>
+  </div>
+</form>
+{% endblock %}
+</html>

@@ -1,0 +1,14 @@
+<html>
+   <body>
+   {% csrf_token %}
+   <form action="temp2/" method = "post">
+       {% csrf_token %}
+       <br>
+         <table align="center">
+        <tr><td>City</td>
+        <td><input type ="text" name ="city"></td></tr>
+        <tr><td><input type = "submit"></td></tr>
+    </table>
+      </form>
+   </body>
+</html>
